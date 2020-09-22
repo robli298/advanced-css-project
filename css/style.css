@@ -19,10 +19,17 @@ body {
     font-size: 16px;
     line-height: 1.7; /* x bigger than the defined line-height */
     color: #777;
+    padding: 30px;
 }
 
 .header {
     height: 95vh; /* The measure vh is equal to 1/100 of the height of the viewport. For instance, if we have the height the browser equals to 800px, 1vh is equals to 8px, similarly if we have a viewport width equals to 650px, 1vw is equals to 6.5px. More info on https://www.freecodecamp.org/news/css-unit-guide/ */
-    background-image: url("../img/hero.jpg");
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, 0.8),
+        rgba(40, 180, 133, 0.8)),
+        url("../img/hero.jpg");
     background-size: cover; /* cover tells the browser to make sure the image always covers the entire container, even if it has to stretch the image or cut a little bit off one of the edges. More info on https://css-tricks.com/almanac/properties/b/background-size/ */
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
